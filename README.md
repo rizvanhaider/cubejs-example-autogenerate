@@ -7,7 +7,7 @@ To run this project on your local machine
  Step 1
 ---------
 
- - Import the database from file `ecom.sql` to your mysql
+ - Import the database from file [`ecom.sql`](https://github.com/rizvanhaider/cubejs-example-autogenerate/blob/master/ecom.sql) to your mysql
  - edit `demo.env` with your database credentials and rename it to `.env`
 
 Step 2
