@@ -1,17 +1,13 @@
-# cubejs-example-autogenerate
-An Example Project Which will contain dynamic creation of cubes (measures, segments, dimensions etc.)
+An Example Project Aimed to have dynamic creation of cubes (measures, segments, dimensions etc.)
 
-To run this project on your local machine
-=========================================
+## To run this project on your local machine
 
- Step 1
----------
+## Step 1
 
  - Import the database from file [`ecom.sql`](https://github.com/rizvanhaider/cubejs-example-autogenerate/blob/master/ecom.sql) to your mysql
  - edit `demo.env` with your database credentials and rename it to `.env`
 
-Step 2
--------
+### Step 2
 
 
  - `$ npm install -g cubejs-cli`
