@@ -1,0 +1,8 @@
+[
+    {
+        "title": "number",
+        "sql": "number",
+        "type": "sum",
+        "friendlyTitle": "yes number of order"
+    }
+]

@@ -1,8 +1,12 @@
-const CubeDefination = require('../cubeautomation');
-const cubeDefination = new CubeDefination();
+const fetch = require('node-fetch');
+const Funnels = require('Funnels');
 
-cube(`Orders`, {
-    sql: cubeDefination.cubeQuery(`orders`),
+asyncModule(async () => {
+  const cmeasures = await (await fetch('http://127.0.0.1:8080/api.json')).json();
+
+  
+  cube(`Orders`, {
+    sql: `select * from ecom.orders`,
   
     joins: {
       Users: {
@@ -11,7 +15,13 @@ cube(`Orders`, {
       }
     },
   
-    measures: cubeDefination.measuresDefination(),
+    measures: Object.assign({}, cmeasures.map(m => ({
+      [`${m.title}`]: {
+        type: `${m.type}`,
+        sql: `${m.sql}`,
+        title: `${m.friendlyTitle}`
+      }
+    })).reduce((a, b) => Object.assign(a, b))),
   
     dimensions: {
       id: {
@@ -37,3 +47,6 @@ cube(`Orders`, {
     }
   });
 
+
+
+})

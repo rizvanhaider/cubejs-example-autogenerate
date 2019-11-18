@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "@cubejs-backend/mysql-driver": "^0.11.18",
-    "@cubejs-backend/server": "^0.11.18"
+    "@cubejs-backend/server": "^0.11.18",
+    "node-fetch": "^2.6.0"
   }
 }
