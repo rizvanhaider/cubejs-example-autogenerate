@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const Funnels = require('Funnels');
 
 asyncModule(async () => {
-  const cmeasures = await (await fetch('http://127.0.0.1:8080/api.json')).json();
+  const cmeasures = await (await fetch('https://raw.githubusercontent.com/rizvanhaider/cubejs-example-autogenerate/master/api-data/api.json')).json();
 
   
   cube(`Orders`, {
